@@ -1,430 +1,165 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Flanzo is a blazing fast responsive HTML5 CSS3 Bootstrap 3 template featuring great hover effects, responsive lightbox, working contact form, blog page and more">
-    <meta name="author" content="Mamoot Studio">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hassan Toor | Software Developer</title>
-    <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
-    <!-- GOOGLE FONTS -->
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600,700,300,800' rel='stylesheet' type='text/css'>
-    <!-- PLUGINS-CSS-->
-    <!--===============================================================-->
-    <link rel="stylesheet" href="css-theme/font-awesome.min.css" type="text/css" >
-    <link rel="stylesheet" href="css-theme/nivo-lightbox.min.css" type="text/css" >
-    <!-- THEME-CSS-->
-    <!--===============================================================-->
-    <link rel="stylesheet" href="css-theme/theme.css" type="text/css">
-    <link rel="stylesheet" href="css-theme/animate.min.css" type="text/css">
-    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!--[if lt IE 9]>
-      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
-    <![endif]-->
-  </head>
-<body data-spy="scroll" data-target=".scroll-bootstrap" data-offset="50">
-  <!-- NAVBAR-->
-  <!--===============================================================-->
-<div id="hide-bar">
-  <nav class="navbar-inverse navbar-fixed-top" role="navigation">
-    <div class="container">
-      <div class="navbar-header">
-        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-      </div>
-      <div class="scroll-bootstrap collapse navbar-collapse">
-        <ul class="nav navbar-nav navbar-right">
-          <li><a class="scroll-smooth" href="#home">Home</a></li>
-          <li><a class="scroll-smooth" href="#about">About</a></li>
-          <li><a class="scroll-smooth" href="#app1">Work</a></li>
-          <li><a class="scroll-smooth" href="#team">Contact</a></li>
-        </ul>
-      </div>
-    </div>
-  </nav>
-</div>
-  <!-- INTRO-->
-  <!--===============================================================-->
-<div id="home">
-  <div class="bg-intro">
-    <div class="container container-intro">
-      <div class="row-intro row">
-        <div class="col-sm-12 col-xs-12">
-          <h1 class="title-intro animated fadeInLeft">Welcome!</h1>
-          <h2 class="subtitle-intro animated fadeInRight">My name is Hassan Toor and I'm a New York based software developer</h2>
-          <div class="btn-delay animated fadeInUp">
-            <a href="#about" class="btn btn-white scroll-smooth">LEARN MORE</a>
-          </div>
-        </div>
+<!DOCTYPE HTML>
+<!--
+	Strata by HTML5 UP
+	html5up.net | @n33co
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Hassan Toor</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<!--[if lte IE 8]><script src="assets/js/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<!--[if lte IE 8]><link rel="stylesheet" href="assets/css/ie8.css" /><![endif]-->
+		<link rel="stylesheet" href="https://cdn.rawgit.com/konpa/devicon/master/devicon.min.css">
 
-      </div>
-    </div>
-  </div>
-</div>
+		<link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="/apple-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="/apple-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="/apple-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="/apple-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="/apple-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="/apple-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="/apple-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-icon-180x180.png">
+		<link rel="icon" type="image/png" sizes="192x192"  href="/android-icon-192x192.png">
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+		<link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png">
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+		<link rel="manifest" href="/manifest.json">
+		<meta name="msapplication-TileColor" content="#ffffff">
+		<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+		<meta name="theme-color" content="#ffffff">
+	</head>
+	<body id="top">
 
-<!-- FEATURES-->
-  <!--===============================================================-->
-<div id="features">
-  <div class="bg-features">
-    <div class="container">
-      <div class="row-services-header row">
-        <div class="col-sm-12 wow fadeInUp">
-          <h1 class="header-title">Recent Work</h1>
-          <a href="#app1" class="btn btn-flat scroll-smooth wow fadeInRight">Portfolio</a> <a href="docs/NickArora_Resume.pdf" class="btn btn-flat wow fadeInRight">Resume</a>
-        </div>
-      </div>
-      <div class="row-features row">
-        <div class="col-features col-sm-4 wow fadeInLeft">
-          <a href="#app1" class='scroll-smooth'>
-          <img src="images/features/pinly.png" alt="features-1">
-          <h1 class="title-features">QUICKNOTE</h1></a>
-          <p class="p-features">A clone of the note-taking app Evernote </p>
-        </div>
-        <div class="col-features col-sm-4 wow fadeInUp">
-          <a href="#app2" class='scroll-smooth'>
-          <img src="images/features/trellino.png" alt="features-2">
-          <h1 class="title-features">CELLULAR</h1></a>
-          <p class="p-features">An interactive browser game coded in JavaScript </p>
-        </div>
-        <div class="col-features col-sm-4 wow fadeInRight">
-          <a href="#app3" class='scroll-smooth'>
-          <img src="images/features/tetris.png" alt="features-3">
-          <h1 class="title-features">kingDOM</h1></a>
-          <p class="p-features">A lightweight DOM manipulation library</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-  <!-- IPHONE -->
-  <!--===============================================================-->
-  <span class="anchor" id="about"></span>
-  <div class="bg-iphone">
-    <div class="container">
-      <img class="img-triangle" src="images/triangle.png" alt="triangle">
-      <div class="row-iphone row">
-        <!-- IPHONE -ICONS -->
-        <div class="col-sm-4 hidden-xs">
-          <div class="iphone-wrapper wow fadeInLeft">
-            <img class="img-responsive" alt="iphone" src="images/iphone-bg.png" />
-          </div>
-        </div>
-        <!-- IPHONE TAB CONTENTS-->
-        <div class="tab-content">
-        <!-- CONTENT-1-->
-          <div class="tab-pane fade in active" id="content-1">
-            <div class="col-sm-offset-1 col-sm-6 hidden-xs">
-              <h2 class="title-iphone wow fadeInDown">ABOUT ME</h2>
-              <p class="p-iphone wow fadeInUp">I am an NYC-based software developer with experience in JavaScript, React, Redux, Ruby on Rails, and HTML/CSS.  I have a passion for solving problems, building things, and above all, learning.  I'm always looking for opportunities to grow and to create.  Feel free to look at some of my recent work and contact me for any inquiries.  </p>
-            </div>
-          </div>
-        <div class="col-xs-12 visible-xs">
-          <div class="iphone-wrapper">
-            <img class="img-responsive" alt="iphone" src="images/iphone-bg.png" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- SERVICES-->
-  <!--===============================================================-->
-<div id="services">
-  <div class="bg-services">
-    <div class="container">
-      <div class="row-services-header row">
-        <div class="col-sm-12 wow fadeInUp">
-          <h1 class="header-title">SKILLS</h1>
-        </div>
-      </div>
-      <div class="row-services row">
-        <div class="col-services col-sm-4 wow fadeInLeft">
-          <!-- <span class="glyphicon glyphicon-search"></span> -->
-          <img alt="htmlcss" src="images/skills/html-css.png" />
-          <h3 class="title-services">HTML5/CSS3</h3>
+		<!-- Header -->
+			<header id="header">
+				<a href="#" class="image avatar"><img src="images/avatar.jpg" alt="" /></a>
+				<h1><strong>Hassan Toor</strong></h1>
+				<h3><i class="icon fa-phone"></i>(215) 584-3850</h3>
+				<h3><i class="icon fa-envelope"></i>hassantoor8@gmail.com</h3>
+			</header>
 
-        </div>
-        <div class="col-services col-sm-4 wow fadeInDown" data-wow-delay="0.3s">
-          <img alt="ruby" src="images/skills/ruby.png" />
-          <h3 class="title-services">RUBY/RAILS</h3>
+		<!-- Main -->
+			<div id="main">
 
-        </div>
-        <div class="col-services col-sm-4 wow fadeInRight">
-          <img alt="js" src="images/skills/js.png" />
-          <h3 class="title-services">JAVASCRIPT</h3>
+				<!-- One -->
+					<section id="one">
+						<header class="major">
+							<h2>About Me</h2>
+						</header>
+						<p>
+							I am a software developer with experience in JavaScript, React, Redux, and Ruby on Rails. I have a deep passion for problem-solving, learning, and creating. Above all, I'm always looking to improve.
+						</p>
+						<p>
+							I'm on the search for opportunities to grow as a developer and collaborate on challenging problems. Take a look at my recent work and feel free to contact me for any inquiries.
+						</p>
+					</section>
 
-        </div>
-      </div>
-      <div class="row-services-last row">
-        <div class="col-services col-sm-4 wow fadeInLeft">
-          <img alt="jquery" src="images/skills/jquery.png" />
-          <h3 class="title-services">JQUERY</h3>
+				<!-- Two -->
+					<section id="two">
+						<h1>Projects</h1>
+						<div class="row">
+							<article class="6u 12u$(xsmall) work-item">
+								<a href="http://www.qcknotes.heroku.com/" class="image fit thumb"><img src="images/thumbs/quicknote.png" alt="" /></a>
+								<h2>Quicknote</h2>
+								<p>Full stack note-taking application inspired by Evernote. Built with React, Redux, and Rails.</p>
+								<a href="http://www.qcknotes.heroku.com/">Live</a> ● <a href="https://github.com/htoor91/Quicknote">Github</a>
+							</article>
+							<article class="6u$ 12u$(xsmall) work-item">
+								<a href="https://htoor91.github.io/Cellular/index.html" class="image fit thumb"><img src="images/thumbs/cellular.png" alt="" /></a>
+								<h2>Cellular</h2>
+								<p>A browser-based cell-survival game. Built with JavaScript and jQuery.</p>
+								<a href="https://htoor91.github.io/Cellular/index.html">Live</a> ● <a href="https://github.com/htoor91/Cellular">Github</a>
+							</article>
+							<article class="6u 12u$(xsmall) work-item">
+								<a href="https://github.com/jyao9/Wrapper" class="image fit thumb"><img src="images/thumbs/kingdom.png" alt="" /></a>
+								<h2>kingDOM</h2>
+								<p>A lightweight JavaScript library that allows for DOM manipulation, traversal, event handling, and AJAX requests with Promises. Inspired by jQuery.</p>
+								<a href="https://htoor91.github.io/kingDOM-demo/">Demo</a> ● <a href="https://github.com/htoor91/kingDOM">Github</a>
+							</article>
+					</section>
 
-        </div>
-        <div class="col-services col-sm-4 wow fadeInUp" data-wow-delay="0.3s">
-          <img alt="backbone" src="images/skills/backbone.png" />
-          <h3 class="title-services">REACT.JS</h3>
-
-        </div>
-        <div class="col-services col-services-last col-sm-4 wow fadeInRight">
-          <img alt="bootstrap" src="images/skills/bootstrap.png" />
-          <h3 class="title-services">REDUX</h3>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-
-  <!-- QUICKNOTE-->
-  <!--===============================================================-->
-  <span class="anchor" id="app1"></span>
-  <div class="bg-imac">
-    <div class="container-imac container">
-      <div class="row-imac row">
-        <div class="col-imac col-sm-5 col-xs-12">
-          <div class="tic wow fadeInLeft">
-            <h5 class="imac-p">QUICKNOTE</h5>
-          </div>
-          <div class="tic wow fadeInLeft">
-            <h6 class="imac-p">A clone of the note-taking app Evernote</h6>
-          </div>
-          <div class="tic wow fadeInLeft">
-            <h5 class="imac-p"><a href="http://qcknotes.heroku.com" style='color: #28d8b3;'>live demo</a> | <a href="https://github.com/htoor91/quicknote" style='color: #28d8b3;'>github</a></h5>
-          </div>
-          <div class="tic wow fadeInLeft">
-            <h5 class="imac-p"><span class="glyphicon glyphicon-ok"></span>Fluid, single-page application.</h5>
-          </div>
-          <div class="tic wow fadeInLeft">
-            <h5 class="imac-p"><span class="glyphicon glyphicon-ok"></span>Consumes RESTful Rails API.</h5>
-          </div>
-          <div class="tic wow fadeInLeft" data-wow-delay="0.1s">
-            <h5 class="imac-p"><span class="glyphicon glyphicon-ok"></span>Add notes, notebooks, tags</h5>
-          </div>
-          <div class="tic wow fadeInLeft" data-wow-delay="0.1s">
-            <h5 class="imac-p"><span class="glyphicon glyphicon-ok"></span>Rich text editing.</h5>
-          </div>
-        </div>
-        <!-- IMAC SLIDER -->
-        <div class="col-imac col-sm-6 col-sm-offset-1 col-xs-12">
-          <div class="col-sl wow fadeInUp">
-            <img class="img-imac" src="images/imac-slider/imac.png" alt="imac">
-            <div class="wrapper-sl wrapper-imac">
-              <!-- SLIDER-IMAGES -->
-              <ul id="slider-imac" class="slider" >
-                <li><img src="images/imac-slider/pinly2.png" alt="slider-2"/></li>
-                <li><img src="images/imac-slider/pinly1.png" alt="slider-1"/></li>
-                <li><img src="images/imac-slider/pinly3.png" alt="slider-3"/></li>
-              </ul>
-              <div class="wrapper-nav">
-                <div class="div-p div-p-imac"><i id="p-imac"></i></div>
-                <div class="div-n div-n-imac"><i id="n-imac"></i></div>
-              </div>
-            </div>
-          </div>
-        </div><!-- IMAC SLIDER END -->
-      </div>
-    </div>
-  </div>
+				<!-- Three -->
+					<section id="three">
+						<h2>Skills</h2>
+						<div class="row">
+							<article class="2u 3u(large) 4u(small) align-center skill">
+								<i class="devicon-javascript-plain"></i>
+								<h3>JavaScript</h3>
+							</article>
+							<article class="2u 3u(large) 4u(small) align-center skill">
+								<i class="devicon-react-original"></i>
+								<h3>React</h3>
+							</article>
+							<article class="2u 3u(large) 4u(small) align-center skill">
+								<i class="devicon-ruby-plain"></i>
+								<h3>Ruby</h3>
+							</article>
+							<article class="2u 3u(large) 4u(small) align-center skill">
+								<i class="devicon-rails-plain"></i>
+								<h3>Rails</h3>
+							</article>
+							<article class="2u 3u(large) 4u(small) align-center skill">
+								<i class="devicon-postgresql-plain"></i>
+								<h3>Postgresql</h3>
+							</article>
+							<article class="2u 3u(large) 4u(small) align-center skill">
+								<i class="devicon-html5-plain"></i>
+								<h3>HTML5</h3>
+							</article>
+							<article class="2u 3u(large) 4u(small) align-center skill">
+								<i class="devicon-css3-plain"></i>
+								<h3>CSS3</h3>
+							</article>
+							<article class="2u 3u(large) 4u(small) align-center skill">
+								<i class="devicon-jquery-plain"></i>
+								<h3>jQuery</h3>
+							</article>
+							<article class="2u 3u(large) 4u(small) align-center skill">
+								<i class="devicon-git-plain"></i>
+								<h3>Git</h3>
+							</article>
+							<!-- <article class="2u 3u(large) 4u(small) align-center skill">
+								<i class="devicon-nodejs-plain"></i>
+								<h3>Node.js</h3>
+							</article> -->
+							<article class="2u 3u(large) 4u(small) align-center skill">
+								<i class="devicon-amazonwebservices-original"></i>
+								<h3>AWS</h3>
+							</article>
+							<article class="2u 3u(large) 4u(small) align-center skill">
+								<i class="devicon-heroku-original"></i>
+								<h3>Heroku</h3>
+							</article>
+							<article class="2u 3u(large) 4u(small) align-center skill">
+								<i class="devicon-atom-original"></i>
+								<h3>Atom</h3>
+							</article>
+						</div>
+					</section>
 
 
-<!-- TRELLINO-->
-  <!--===============================================================-->
-  <span class="anchor" id="app2"></span>
-  <div class="bg-contact">
-    <div class="container-imac container">
-      <div class="row-imac row">
-        <div class="col-imac col-sm-5 col-xs-12">
-          <div class="tic wow fadeInLeft">
-            <h5 class="light-imac-p">CELLULAR</h5>
-          </div>
-          <div class="tic wow fadeInLeft">
-            <h6 class="light-imac-p">An interactive browser game coded in JavaScript</h6>
-          </div>
-          <div class="tic wow fadeInLeft">
-            <h5 class="imac-p"><a href="https://htoor91.github.io/Cellular/index.html" style='color: #1fa387;'>live demo</a> | <a href="https://github.com/htoor91/Cellular" style='color: #1fa387;'>github</a></h5>
-          </div>
-          <div class="tic wow fadeInLeft">
-            <h5 class="light-imac-p"><span class="glyphicon glyphicon-ok"></span>Object Oriented Design</h5>
-          </div>
-          <div class="tic wow fadeInLeft" data-wow-delay="0.1s">
-            <h5 class="light-imac-p light-bg"><span class="glyphicon glyphicon-ok"></span>Advanced Canvas Manipulation</h5>
-          </div>
-          <div class=" tic wow fadeInLeft" data-wow-delay="0.2s">
-            <h5 class="light-imac-p"><span class="glyphicon glyphicon-ok"></span>Collision detection and physics-based movement</h5>
-          </div>
-          <div class="tic wow fadeInLeft" data-wow-delay="0.3s">
-            <h5 class="light-imac-p"><span class="glyphicon glyphicon-ok"></span>Infinite replayability</h5>
-          </div>
-        </div>
-        <!-- IMAC SLIDER -->
-        <div class="col-imac col-sm-6 col-sm-offset-1 col-xs-12">
-          <div class="col-sl wow fadeInUp">
-            <img class="img-imac" src="images/imac-slider/imac.png" alt="imac">
-            <div class="wrapper-sl wrapper-imac">
-              <!-- SLIDER-IMAGES -->
-              <ul id="slider-imac" class="slider" >
-                <li><img src="images/imac-slider/trellino.png" alt="slider-1"/></li>
-              </ul>
-              <div class="wrapper-nav">
-                <div class="div-p div-p-imac"><i id="p-imac"></i></div>
-                <div class="div-n div-n-imac"><i id="n-imac"></i></div>
-              </div>
-            </div>
-          </div>
-        </div><!-- IMAC SLIDER END -->
-      </div>
-    </div>
-  </div>
-  </div>
 
- <!-- TETRIS -->
-  <!--===============================================================-->
-  <span class="anchor" id="app3"></span>
-  <div class="bg-imac">
-    <div class="container-imac container">
-      <div class="row-imac row">
-        <div class="col-imac col-sm-5 col-xs-12">
-          <div class="tic wow fadeInLeft">
-            <h5 class="imac-p">kingDOM</h5>
-          </div>
-          <div class="tic wow fadeInLeft">
-            <h6 class="imac-p">Lightweight DOM manipulation library. Usage demonstrated with a weather app</h6>
-          </div>
-          <div class="tic wow fadeInLeft">
-            <h5 class="imac-p"><a href="" style='color: #28d8b3;'>live demo</a> | <a href="https://github.com/htoor91/DOMQuery" style='color: #28d8b3;'>github</a></h5>
-          </div>
-          <div class="tic wow fadeInLeft">
-            <h5 class="imac-p"><span class="glyphicon glyphicon-ok"></span>DOM Manipulation/Traversal</h5>
-          </div>
-          <div class="tic wow fadeInLeft">
-            <h5 class="imac-p"><span class="glyphicon glyphicon-ok"></span>Lightweight and coded using only vanilla JavaScript</h5>
-          </div>
-          <div class="tic wow fadeInLeft" data-wow-delay="0.1s">
-            <h5 class="imac-p"><span class="glyphicon glyphicon-ok"></span>Incorporates ES6 Promise functionality</h5>
-          </div>
-        </div>
-        <!-- IMAC SLIDER -->
-        <div class="col-imac col-sm-6 col-sm-offset-1 col-xs-12">
-          <div class="col-sl wow fadeInUp">
-            <img class="img-imac" src="images/imac-slider/imac.png" alt="imac">
-            <div class="wrapper-sl wrapper-imac">
-              <!-- SLIDER-IMAGES -->
-              <ul id="slider-imac" class="slider" >
-                <li><img src="images/imac-slider/tetris.png" alt="slider-1"/></li>
-              </ul>
-              <div class="wrapper-nav">
-                <div class="div-p div-p-imac"><i id="p-imac"></i></div>
-                <div class="div-n div-n-imac"><i id="n-imac"></i></div>
-              </div>
-            </div>
-          </div>
-        </div><!-- IMAC SLIDER END -->
-      </div>
-    </div>
-  </div>
-  </div>
+		<!-- Footer -->
+			<footer id="footer">
+				<ul class="icons">
+					<li><a href="https://github.com/htoor91" class="icon fa-github"><span class="label">Github</span></a></li>
+					<li><a href="assets/Resume.pdf" class="icon fa-file-text-o"><span class="label">Resume</span></a></li>
+					<li><a href="https://www.linkedin.com/in/hassantoor" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
+					<li><a href="https://angel.co/hassan-toor" class="icon fa-angellist"><span class="label">Angel List</span></a></li>
+				</ul>
+			</footer>
 
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/skel.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<!--[if lte IE 8]><script src="assets/js/ie/respond.min.js"></script><![endif]-->
+			<script src="assets/js/main.js"></script>
 
-<!-- CONTACT INFO -->
-<!--===============================================================-->
-<span class="anchor" id="team"></span>
-  <div class="bg-team">
-    <div class="container">
-
-      <div class="row row-team">
-        <!-- TEAM-1 -->
-        <div class="col-team col-sm-offset-1 col-sm-4 wow pulse">
-          <div class="wrapper-team-pic">
-            <img class="img-team" src="images/team/nick.jpg" alt="team">
-            <div class="team-hover-bg"></div>
-            <a href="https://github.com/htoor91"><i class="fa fa-github-alt team-icon team-t"></i></a>
-            <a href="https://www.linkedin.com/in/hassantoor"><i class="fa fa-linkedin team-icon team-f"></i></a>
-          </div>
-          <h2 class="team-title">Hassan Toor</h2>
-          <h3 class="team-subtitle">Software Developer</h3>
-        </div>
-
-        <!-- CONTACT-INFO -->
-        <div class="col-sm-5 row-info">
-          <div class="row-info row">
-            <div class="wow fadeInUp">
-
-              <div class="col-info col-sm-12">
-                <h4 class="title-contact">Get in touch</h4>
-                <P class="p-contact">Drop me a line if you'd like to get in touch!
-                </P>
-              </div>
-
-              <div class="col-info col-sm-12">
-                <h4 class="title-contact">Contact Info</h4>
-                  <i class="fa fa-phone fa-2x pull-left"></i>
-                <h5 class="title-contact-sm">215 584 3850</h5>
-                  <i class="fa fa-envelope fa-2x pull-left"></i>
-                <h5 class="title-contact-sm">hassantoor8@gmail.com</h5>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </div>
-  </div>
-</div>
-
-  <!-- FOOTER-->
-  <!--===============================================================-->
-  <div class="bg-footer">
-    <div class="container">
-      <div class="row row-footer">
-        <div class="col-md-12">
-          <div class="wrapper-social">
-            <a href="https://github.com/htoor91"><i class="fa fa-github-alt twitter-footer wow bounce" data-wow-delay="0.2s"></i></a>
-            <a href="https://www.linkedin.com/in/hassantoor"><i class="fa fa-linkedin dribbble-footer wow bounce"  data-wow-delay="0.3s"></i></a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- FOOTER-BOTTOM-->
-  <!--===============================================================-->
-  <div class="bg-footer-bottom">
-    <div class="container">
-      <div class="row-footer-bottom row">
-        <div class="col-sm-12 hidden-xs">
-          <center>&copy;2016 All Rights Reserved</center>
-        </div>
-      </div>
-    </div>
-  </div>
-    <!-- JAVASCRIPT-->
-    <script src="https://code.jquery.com/jquery-1.10.2.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js-theme/hide-nav.js"></script>
-    <script src="js-theme/wow.min.js"></script>
-    <script>
-      wow = new WOW(
-        {
-          animateClass: 'animated',
-          mobile: false
-        }
-      );
-      wow.init();
-    </script>
-    <script src="js-theme/jquery.bxslider.min.js"></script>
-    <script src="js-theme/nivo-lightbox.min.js"></script>
-    <script src="js-theme/jquery.mixitup.min.js"></script>
-    <script type="text/javascript"
-      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDiUHrtP7COzKY2azegkJZzps3J7pQ4Qs4&sensor=false">
-    </script>
-    <script src="js-theme/call.js"></script>
-  </body>
+	</body>
 </html>
