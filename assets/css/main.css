@@ -1977,7 +1977,8 @@
 		}
 
 		.icon > .label {
-			display: none;
+			display: block;
+			color: white;
 		}
 
 /* Image */
