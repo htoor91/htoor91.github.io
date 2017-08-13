@@ -1,59 +1,55 @@
 /*
-	Strata by HTML5 UP
+	Hyperspace by HTML5 UP
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
 
 (function($) {
 
-	var settings = {
-
-		// Parallax background effect?
-			parallax: true,
-
-		// Parallax factor (lower = more intense, higher = less intense).
-			parallaxFactor: 20
-
-	};
-
 	skel.breakpoints({
-		xlarge: '(max-width: 1800px)',
-		large: '(max-width: 1280px)',
-		medium: '(max-width: 980px)',
-		small: '(max-width: 736px)',
-		xsmall: '(max-width: 480px)'
+		xlarge:	'(max-width: 1680px)',
+		large:	'(max-width: 1280px)',
+		medium:	'(max-width: 980px)',
+		small:	'(max-width: 736px)',
+		xsmall:	'(max-width: 480px)'
 	});
 
 	$(function() {
 
-		var $window = $(window),
+		var	$window = $(window),
 			$body = $('body'),
-			$header = $('#header'),
-			$footer = $('#footer'),
-			$main = $('#main');
+			$sidebar = $('#sidebar');
+
+		// Hack: Enable IE flexbox workarounds.
+			if (skel.vars.IEVersion < 12)
+				$body.addClass('is-ie');
 
 		// Disable animations/transitions until the page has loaded.
-			$body.addClass('is-loading');
+			if (skel.canUse('transition'))
+				$body.addClass('is-loading');
 
 			$window.on('load', function() {
-				$body.removeClass('is-loading');
+				window.setTimeout(function() {
+					$body.removeClass('is-loading');
+				}, 100);
 			});
 
-		// Touch?
-			if (skel.vars.mobile) {
+		// Forms.
 
-				// Turn on touch mode.
-					$body.addClass('is-touch');
+			// Fix: Placeholder polyfill.
+				$('form').placeholder();
 
-				// Height fix (mostly for iOS).
-					window.setTimeout(function() {
-						$window.scrollTop($window.scrollTop() + 1);
-					}, 0);
+			// Hack: Activate non-input submits.
+				$('form').on('click', '.submit', function(event) {
 
-			}
+					// Stop propagation, default.
+						event.stopPropagation();
+						event.preventDefault();
 
-		// Fix: Placeholder polyfill.
-			$('form').placeholder();
+					// Submit form.
+						$(this).parents('form').submit();
+
+				});
 
 		// Prioritize "important" elements on medium.
 			skel.on('+medium -medium', function() {
@@ -63,72 +59,151 @@
 				);
 			});
 
-		// Footer.
-			skel.on('+medium', function() {
-				$footer.insertAfter($main);
-			});
+		// Sidebar.
+			if ($sidebar.length > 0) {
 
-			skel.on('-medium !medium', function() {
-				$footer.appendTo($header);
-			});
+				var $sidebar_a = $sidebar.find('a');
 
-		// Header.
+				$sidebar_a
+					.addClass('scrolly')
+					.on('click', function() {
 
-			// Parallax background.
+						var $this = $(this);
 
-				// Disable parallax on IE (smooth scrolling is jerky), and on mobile platforms (= better performance).
-					if (skel.vars.browser == 'ie'
-					||	skel.vars.mobile)
-						settings.parallax = false;
+						// External link? Bail.
+							if ($this.attr('href').charAt(0) != '#')
+								return;
 
-				if (settings.parallax) {
+						// Deactivate all links.
+							$sidebar_a.removeClass('active');
 
-					skel.on('change', function() {
+						// Activate link *and* lock it (so Scrollex doesn't try to activate other links as we're scrolling to this one's section).
+							$this
+								.addClass('active')
+								.addClass('active-locked');
 
-						if (skel.breakpoint('medium').active) {
+					})
+					.each(function() {
 
-							$window.off('scroll.strata_parallax');
-							$header.css('background-position', 'top left, center center');
+						var	$this = $(this),
+							id = $this.attr('href'),
+							$section = $(id);
 
-						}
-						else {
+						// No section for this link? Bail.
+							if ($section.length < 1)
+								return;
 
-							$header.css('background-position', 'left 0px');
+						// Scrollex.
+							$section.scrollex({
+								mode: 'middle',
+								top: '-20vh',
+								bottom: '-20vh',
+								initialize: function() {
 
-							$window.on('scroll.strata_parallax', function() {
-								$header.css('background-position', 'left ' + (-1 * (parseInt($window.scrollTop()) / settings.parallaxFactor)) + 'px');
+									// Deactivate section.
+										if (skel.canUse('transition'))
+											$section.addClass('inactive');
+
+								},
+								enter: function() {
+
+									// Activate section.
+										$section.removeClass('inactive');
+
+									// No locked links? Deactivate all links and activate this section's one.
+										if ($sidebar_a.filter('.active-locked').length == 0) {
+
+											$sidebar_a.removeClass('active');
+											$this.addClass('active');
+
+										}
+
+									// Otherwise, if this section's link is the one that's locked, unlock it.
+										else if ($this.hasClass('active-locked'))
+											$this.removeClass('active-locked');
+
+								}
 							});
 
-						}
-
 					});
 
-					$window.on('load', function() {
-						$window.triggerHandler('scroll');
-					});
+			}
+
+		// Scrolly.
+			$('.scrolly').scrolly({
+				speed: 1000,
+				offset: function() {
+
+					// If <=large, >small, and sidebar is present, use its height as the offset.
+						if (skel.breakpoint('large').active
+						&&	!skel.breakpoint('small').active
+						&&	$sidebar.length > 0)
+							return $sidebar.height();
+
+					return 0;
 
 				}
+			});
 
-		// Main Sections: Two.
+		// Spotlights.
+			$('.spotlights > section')
+				.scrollex({
+					mode: 'middle',
+					top: '-10vh',
+					bottom: '-10vh',
+					initialize: function() {
 
-			// Lightbox gallery.
-				$window.on('load', function() {
+						// Deactivate section.
+							if (skel.canUse('transition'))
+								$(this).addClass('inactive');
 
-					$('#two').poptrox({
-						caption: function($a) { return $a.next('h3').text(); },
-						overlayColor: '#2c2c2c',
-						overlayOpacity: 0.85,
-						popupCloserText: '',
-						popupLoaderText: '',
-						selector: '.work-item a.image',
-						usePopupCaption: true,
-						usePopupDefaultStyling: false,
-						usePopupEasyClose: false,
-						usePopupNav: true,
-						windowMargin: (skel.breakpoint('small').active ? 0 : 50)
-					});
+					},
+					enter: function() {
+
+						// Activate section.
+							$(this).removeClass('inactive');
+
+					}
+				})
+				.each(function() {
+
+					var	$this = $(this),
+						$image = $this.find('.image'),
+						$img = $image.find('img'),
+						x;
+
+					// Assign image.
+						$image.css('background-image', 'url(' + $img.attr('src') + ')');
+
+					// Set background position.
+						if (x = $img.data('position'))
+							$image.css('background-position', x);
+
+					// Hide <img>.
+						$img.hide();
 
 				});
+
+		// Features.
+			if (skel.canUse('transition'))
+				$('.features')
+					.scrollex({
+						mode: 'middle',
+						top: '-20vh',
+						bottom: '-20vh',
+						initialize: function() {
+
+							// Deactivate section.
+								$(this).addClass('inactive');
+
+						},
+						enter: function() {
+
+							// Activate section.
+								$(this).removeClass('inactive');
+
+						}
+					});
 
 	});
 
